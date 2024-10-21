@@ -29,5 +29,10 @@ jobs:
       - name: Run POSTMAN collection
         run: | 
           newman run "collection\TRELLO_Sergey_test.postman_collection.json" --environment "collection\Trello_environment.postman_environment.json"
-          -r htmlextra --reporter-htmlextra-export report\report.html
-          
+          -r htmlextra --reporter-htmlextra-export report\report1.html
+        
+      - name: Upload test report
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-report
+          path: report.html  
