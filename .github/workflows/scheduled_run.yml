@@ -30,9 +30,4 @@ jobs:
         run: | 
           newman run "collection\TRELLO_Sergey_test.postman_collection.json" --environment "collection\Trello_environment.postman_environment.json"
           -r htmlextra --reporter-htmlextra-export report\report.html
-
-      - name: CLI reporter
-        uses: stoe/action-reporting-cli  
-        with:
-          name: CLI report
-          path: report
+          
