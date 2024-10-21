@@ -35,4 +35,4 @@ jobs:
         uses: stoe/action-reporting-cli  
         with:
           name: CLI report
-          pth: report
+          path: report
